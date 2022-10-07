@@ -1,0 +1,36 @@
+print("Hello User ")
+a=[]
+user=int(input("how many users are entitled to this software?: "))
+
+for i in range(user):
+   names=input("Enter User Names: ")
+   a.append(names)
+print("These are the names entered: ")
+print(list(a))
+
+password=input("Please set a password: ")
+locked=password
+
+username=input("Enter user name")
+if username in a:
+   enter = input("please enter pasword again: ")
+   if enter == locked:
+      print("Login Successfull: " + str(username))
+   else:
+      while (enter != locked):
+         enter = input("passwords don't match:")
+      print("Login Successfull " + str(username))
+else:
+   while(username!=a):
+      enter=input("try again,wrong username:")
+   print("alright:  ")
+   enter = input("please enter pasword again: ")
+   if enter == locked:
+      print("Login Successfull: " + str(username))
+   else:
+      while (enter != locked):
+         enter = input("passwords don't match:")
+      print("Login Successfull " + str(username))
+
+
+
